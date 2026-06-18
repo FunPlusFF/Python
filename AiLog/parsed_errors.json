@@ -1,0 +1,859 @@
+{
+  "parse_time": "2026-06-19 01:04:05",
+  "total_errors": 94,
+  "time_filter": {
+    "from": "2026-06-18 01:04:05",
+    "to": null
+  },
+  "files": [
+    "test_greenplum_log.csv"
+  ],
+  "errors": [
+    {
+      "timestamp": "2026-06-18 14:06:14",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"temp_analysis\" does not exist",
+      "host": "192.168.1.10",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:11:04",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "syntax error at or near \"SELECT\"",
+      "host": "192.168.1.10",
+      "segment": "seg2",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:13:26",
+      "severity": "ERROR",
+      "error_type": "OTHER_ERROR",
+      "message": "could not read block 12345 in relation \"large_table\": Input/output error",
+      "host": "192.168.1.10",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:14:41",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "Memory exhausted during hash join operation",
+      "host": "10.0.0.5",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:19:42",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "column \"nonexistent_column\" does not exist",
+      "host": "192.168.1.20",
+      "segment": "seg2",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:20:42",
+      "severity": "ERROR",
+      "error_type": "OTHER_ERROR",
+      "message": "could not read block 12345 in relation \"large_table\": Input/output error",
+      "host": "192.168.1.30",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:22:33",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "syntax error at or near \"SELECT\"",
+      "host": "192.168.1.30",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:22:41",
+      "severity": "ERROR",
+      "error_type": "DISK_ERROR",
+      "message": "I/O error on segment seg1",
+      "host": "10.0.0.5",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:23:52",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"sales_fact\" does not exist",
+      "host": "192.168.1.20",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:28:19",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "gp_vmem_protect_limit exceeded for query",
+      "host": "192.168.1.20",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:30:15",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"pk_orders\"",
+      "host": "192.168.1.10",
+      "segment": "seg5",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:30:28",
+      "severity": "WARNING",
+      "error_type": "DATA_ERROR",
+      "message": "invalid input syntax for type timestamp: \"not_a_date\"",
+      "host": "192.168.1.20",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:30:31",
+      "severity": "WARNING",
+      "error_type": "DATA_ERROR",
+      "message": "value too long for type varchar(50)",
+      "host": "10.0.0.6",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:31:33",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"pk_customers\"",
+      "host": "10.0.0.6",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:33:15",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "segment process failed out of memory (work_mem exceeded)",
+      "host": "10.0.0.5",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:33:19",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "out of memory - failed to allocate 256MB",
+      "host": "192.168.1.10",
+      "segment": "seg5",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:34:13",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "column \"nonexistent_column\" does not exist",
+      "host": "192.168.1.30",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:34:25",
+      "severity": "ERROR",
+      "error_type": "INTERCONNECT_ERROR",
+      "message": "broken pipe on interconnect",
+      "host": "10.0.0.5",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:35:09",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "Memory exhausted during hash join operation",
+      "host": "192.168.1.20",
+      "segment": "seg5",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:35:17",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "segment process failed out of memory (work_mem exceeded)",
+      "host": "mdw",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:35:21",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"pk_customers\"",
+      "host": "10.0.0.6",
+      "segment": "seg5",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:35:55",
+      "severity": "WARNING",
+      "error_type": "OTHER_ERROR",
+      "message": "numeric field overflow",
+      "host": "192.168.1.10",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:35:56",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "missing FROM-clause entry for table \"staging\"",
+      "host": "192.168.1.30",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:36:23",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "segment process failed out of memory (work_mem exceeded)",
+      "host": "10.0.0.6",
+      "segment": "seg2",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:36:23",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"idx_unique_invoice\"",
+      "host": "10.0.0.5",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:36:28",
+      "severity": "ERROR",
+      "error_type": "INTERCONNECT_ERROR",
+      "message": "connection refused",
+      "host": "192.168.1.10",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:36:38",
+      "severity": "ERROR",
+      "error_type": "OTHER_ERROR",
+      "message": "could not read block 12345 in relation \"large_table\": Input/output error",
+      "host": "192.168.1.30",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:36:42",
+      "severity": "WARNING",
+      "error_type": "DATA_ERROR",
+      "message": "value too long for type varchar(50)",
+      "host": "mdw",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:37:02",
+      "severity": "WARNING",
+      "error_type": "DATA_ERROR",
+      "message": "invalid input syntax for type timestamp: \"not_a_date\"",
+      "host": "192.168.1.10",
+      "segment": "seg5",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:37:17",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"idx_unique_invoice\"",
+      "host": "10.0.0.5",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:37:26",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"idx_unique_invoice\"",
+      "host": "10.0.0.5",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:37:47",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "schema \"reporting\" does not exist",
+      "host": "10.0.0.5",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:37:51",
+      "severity": "ERROR",
+      "error_type": "INTERCONNECT_ERROR",
+      "message": "interconnect timeout after 180s",
+      "host": "192.168.1.30",
+      "segment": "seg2",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:38:18",
+      "severity": "WARNING",
+      "error_type": "DATA_ERROR",
+      "message": "invalid input syntax for type integer: \"abc\"",
+      "host": "10.0.0.5",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:39:06",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"idx_unique_invoice\"",
+      "host": "192.168.1.20",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:39:19",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "Virtual Memory exhausted on segment",
+      "host": "192.168.1.20",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:39:23",
+      "severity": "ERROR",
+      "error_type": "DISK_ERROR",
+      "message": "disk full on segment seg4",
+      "host": "mdw",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:39:41",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "Memory exhausted during hash join operation",
+      "host": "10.0.0.5",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:39:43",
+      "severity": "ERROR",
+      "error_type": "OTHER_ERROR",
+      "message": "could not read block 12345 in relation \"large_table\": Input/output error",
+      "host": "10.0.0.5",
+      "segment": "seg5",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:39:46",
+      "severity": "WARNING",
+      "error_type": "OTHER_ERROR",
+      "message": "numeric field overflow",
+      "host": "10.0.0.6",
+      "segment": "seg5",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:40:01",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"idx_unique_invoice\"",
+      "host": "192.168.1.30",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:40:48",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"temp_analysis\" does not exist",
+      "host": "192.168.1.10",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:41:27",
+      "severity": "WARNING",
+      "error_type": "DATA_ERROR",
+      "message": "value too long for type varchar(50)",
+      "host": "10.0.0.6",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:42:27",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "missing FROM-clause entry for table \"staging\"",
+      "host": "192.168.1.10",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:42:32",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"idx_unique_invoice\"",
+      "host": "10.0.0.6",
+      "segment": "seg2",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:42:42",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"pk_customers\"",
+      "host": "mdw",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:43:33",
+      "severity": "ERROR",
+      "error_type": "INTERCONNECT_ERROR",
+      "message": "broken pipe on interconnect",
+      "host": "10.0.0.6",
+      "segment": "seg5",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:43:35",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "syntax error at or near \"SELECT\"",
+      "host": "10.0.0.5",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:44:31",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"idx_unique_invoice\"",
+      "host": "10.0.0.6",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:44:38",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"temp_analysis\" does not exist",
+      "host": "192.168.1.20",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:45:11",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "Memory exhausted during hash join operation",
+      "host": "10.0.0.6",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:45:24",
+      "severity": "ERROR",
+      "error_type": "INTERCONNECT_ERROR",
+      "message": "broken pipe on interconnect",
+      "host": "10.0.0.5",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:45:25",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"customer_dim\" does not exist",
+      "host": "192.168.1.30",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:46:15",
+      "severity": "ERROR",
+      "error_type": "INTERCONNECT_ERROR",
+      "message": "interconnect timeout after 180s",
+      "host": "10.0.0.6",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:46:20",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"pk_transactions\"",
+      "host": "10.0.0.5",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:46:41",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"pk_customers\"",
+      "host": "192.168.1.10",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:47:11",
+      "severity": "ERROR",
+      "error_type": "DEADLOCK",
+      "message": "deadlock detected",
+      "host": "192.168.1.30",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:47:14",
+      "severity": "ERROR",
+      "error_type": "DEADLOCK",
+      "message": "deadlock detected",
+      "host": "10.0.0.6",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:47:40",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"pk_orders\"",
+      "host": "192.168.1.30",
+      "segment": "seg2",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:48:01",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"pk_customers\"",
+      "host": "192.168.1.10",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:48:38",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "missing FROM-clause entry for table \"staging\"",
+      "host": "192.168.1.10",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:48:56",
+      "severity": "ERROR",
+      "error_type": "CONNECTION_ERROR",
+      "message": "too many clients already",
+      "host": "mdw",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:49:16",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "Memory exhausted during hash join operation",
+      "host": "192.168.1.30",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:49:27",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "gp_vmem_protect_limit exceeded for query",
+      "host": "mdw",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:49:34",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "out of memory - failed to allocate 256MB",
+      "host": "192.168.1.20",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:50:04",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "Virtual Memory exhausted on segment",
+      "host": "192.168.1.30",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:50:07",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"pk_transactions\"",
+      "host": "10.0.0.5",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:50:28",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "column \"nonexistent_column\" does not exist",
+      "host": "10.0.0.5",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:51:32",
+      "severity": "WARNING",
+      "error_type": "DATA_ERROR",
+      "message": "invalid input syntax for type integer: \"abc\"",
+      "host": "192.168.1.30",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:51:52",
+      "severity": "ERROR",
+      "error_type": "INTERCONNECT_ERROR",
+      "message": "interconnect error: Connection reset by peer",
+      "host": "192.168.1.30",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:51:57",
+      "severity": "ERROR",
+      "error_type": "INTERCONNECT_ERROR",
+      "message": "interconnect error: Connection refused",
+      "host": "10.0.0.6",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:52:01",
+      "severity": "WARNING",
+      "error_type": "DATA_ERROR",
+      "message": "invalid input syntax for type integer: \"abc\"",
+      "host": "10.0.0.6",
+      "segment": "seg2",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:52:06",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "segment process failed out of memory (work_mem exceeded)",
+      "host": "192.168.1.10",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:52:15",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"idx_unique_invoice\"",
+      "host": "10.0.0.5",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:52:32",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "Memory exhausted during hash join operation",
+      "host": "10.0.0.5",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:54:09",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"customer_dim\" does not exist",
+      "host": "192.168.1.10",
+      "segment": "seg2",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:55:04",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"temp_analysis\" does not exist",
+      "host": "mdw",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:55:44",
+      "severity": "ERROR",
+      "error_type": "CONNECTION_ERROR",
+      "message": "connection limit exceeded for database \"warehouse\"",
+      "host": "192.168.1.20",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:55:59",
+      "severity": "ERROR",
+      "error_type": "INTERCONNECT_ERROR",
+      "message": "interconnect timeout after 180s",
+      "host": "10.0.0.5",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:56:09",
+      "severity": "ERROR",
+      "error_type": "DUPLICATE_KEY",
+      "message": "duplicate key value violates unique constraint \"pk_customers\"",
+      "host": "192.168.1.30",
+      "segment": "seg2",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:56:20",
+      "severity": "ERROR",
+      "error_type": "DEADLOCK",
+      "message": "deadlock detected while waiting for ShareLock",
+      "host": "10.0.0.6",
+      "segment": "seg5",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:56:33",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "schema \"reporting\" does not exist",
+      "host": "mdw",
+      "segment": "seg1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:56:46",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "missing FROM-clause entry for table \"staging\"",
+      "host": "mdw",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:56:54",
+      "severity": "WARNING",
+      "error_type": "OTHER_ERROR",
+      "message": "numeric field overflow",
+      "host": "10.0.0.6",
+      "segment": "seg5",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:57:13",
+      "severity": "ERROR",
+      "error_type": "DEADLOCK",
+      "message": "deadlock detected",
+      "host": "10.0.0.5",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:57:31",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "segment process failed out of memory (work_mem exceeded)",
+      "host": "mdw",
+      "segment": "seg2",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:58:19",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"customer_dim\" does not exist",
+      "host": "192.168.1.30",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:58:50",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"temp_analysis\" does not exist",
+      "host": "192.168.1.30",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:59:06",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "column \"nonexistent_column\" does not exist",
+      "host": "10.0.0.6",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:59:07",
+      "severity": "ERROR",
+      "error_type": "OUT_OF_MEMORY",
+      "message": "segment process failed out of memory (work_mem exceeded)",
+      "host": "192.168.1.10",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:59:08",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"customer_dim\" does not exist",
+      "host": "10.0.0.5",
+      "segment": "seg4",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:59:27",
+      "severity": "ERROR",
+      "error_type": "INTERCONNECT_ERROR",
+      "message": "failed to connect to segment on host 10.0.0.5",
+      "host": "192.168.1.10",
+      "segment": "seg0",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:59:53",
+      "severity": "ERROR",
+      "error_type": "QUERY_ERROR",
+      "message": "relation \"sales_fact\" does not exist",
+      "host": "192.168.1.20",
+      "segment": "seg-1",
+      "file": "test_greenplum_log.csv"
+    },
+    {
+      "timestamp": "2026-06-18 14:59:59",
+      "severity": "ERROR",
+      "error_type": "DEADLOCK",
+      "message": "deadlock detected",
+      "host": "10.0.0.5",
+      "segment": "seg3",
+      "file": "test_greenplum_log.csv"
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "total_errors": 94,
+  "time_info": {
+    "first_error": "2026-06-18 14:06:14",
+    "last_error": "2026-06-18 14:59:59"
+  },
+  "severity_distribution": {
+    "ERROR": 83,
+    "WARNING": 11
+  },
+  "error_types": {
+    "QUERY_ERROR": {
+      "count": 24,
+      "hosts": [
+        "192.168.1.10",
+        "mdw",
+        "192.168.1.20",
+        "10.0.0.5",
+        "192.168.1.30",
+        "10.0.0.6"
+      ],
+      "segments": [
+        "seg0",
+        "seg4",
+        "seg-1",
+        "seg2",
+        "seg1",
+        "seg3"
+      ],
+      "examples": [
+        {
+          "severity": "ERROR",
+          "message": "relation \"temp_analysis\" does not exist",
+          "detail": "LINE 1: SELECT * FROM",
+          "query": "SELECT * FROM staging.sales_data",
+          "host": "192.168.1.10",
+          "file": "test_greenplum_log.csv"
+        },
+        {
+          "severity": "ERROR",
+          "message": "syntax error at or near \"SELECT\"",
+          "detail": "Error occurred during query planning",
+          "query": "SELECT * FROM staging.sales_data",
+          "host": "192.168.1.10",
+          "file": "test_greenplum_log.csv"
+        }
+      ]
+    },
+    "OTHER_ERROR": {
+      "count": 7,
+      "hosts": [
+        "192.168.1.10",
+        "10.0.0.5",
+        "192.168.1.30",
+        "10.0.0.6"
+      ],
+      "segments": [
+        "seg1",
+        "seg5",
+        "seg3"
+      ],
+      "examples": [
+        {
+          "severity": "ERROR",
+          "message": "could not read block 12345 in relation \"large_table\": Input/output error",
+          "detail": "Available space: 0 bytes",
+          "query": "INSERT INTO large_table SELECT * FROM staging.backup_data",
+          "host": "192.168.1.10",
+          "file": "test_greenplum_log.csv"
+        },
+        {
+          "severity": "ERROR",
+          "message": "could not read block 12345 in relation \"large_table\": Input/output error",
+          "detail": "Available space: 0 bytes",
+          "query": "INSERT INTO large_table SELECT * FROM staging.backup_data",
+          "host": "192.168.1.30",
+          "file": "test_greenplum_log.csv"
+        }
+      ]
+    },
+    "OUT_OF_MEMORY": {
+      "count": 18,
+      "hosts": [
+        "192.168.1.10",
+        "mdw",
+        "192.168.1.20",
+        "10.0.0.5",
+        "192.168.1.30",
+        "10.0.0.6"
+      ],
+      "segments": [
+        "seg4",
+        "seg5",
+        "seg-1",
+        "seg2",
+        "seg1",
+        "seg3"
+      ],
+      "examples": [
+        {
+          "severity": "ERROR",
+          "message": "Memory exhausted during hash join operation",
+          "detail": "Failed on segment seg2",
+          "query": "UPDATE large_table SET status = processed WHERE date = 2026-06-18",
+          "host": "10.0.0.5",
+          "file": "test_greenplum_log.csv"
+        },
+        {
+          "severity": "ERROR",
+          "message": "gp_vmem_protect_limit exceeded for query",
+          "detail": "Failed on segment seg2",
+          "query": "SELECT * FROM large_fact f JOIN dim_customer c ON f.cust_id = c.id WHERE date >= 2024-01-01",
+          "host": "192.168.1.20",
+          "file": "test_greenplum_log.csv"
+        }
+      ]
+    },
+    "DISK_ERROR": {
+      "count": 2,
+      "hosts": [
+        "10.0.0.5",
+        "mdw"
+      ],
+      "segments": [
+        "seg1",
+        "seg4"
+      ],
+      "examples": [
+        {
+          "severity": "ERROR",
+          "message": "I/O error on segment seg1",
+          "detail": "Filesystem: /data/primary/gpseg4",
+          "query": "INSERT INTO large_table SELECT * FROM staging.backup_data",
+          "host": "10.0.0.5",
+          "file": "test_greenplum_log.csv"
+        },
+        {
+          "severity": "ERROR",
+          "message": "disk full on segment seg4",
+          "detail": "Available space: 0 bytes",
+          "query": "INSERT INTO large_table SELECT * FROM staging.backup_data",
+          "host": "mdw",
+          "file": "test_greenplum_log.csv"
+        }
+      ]
+    },
+    "DUPLICATE_KEY": {
+      "count": 18,
+      "hosts": [
+        "192.168.1.10",
+        "mdw",
+        "192.168.1.20",
+        "10.0.0.5",
+        "192.168.1.30",
+        "10.0.0.6"
+      ],
+      "segments": [
+        "seg0",
+        "seg4",
+        "seg5",
+        "seg-1",
+        "seg2",
+        "seg1",
+        "seg3"
+      ],
+      "examples": [
+        {
+          "severity": "ERROR",
+          "message": "duplicate key value violates unique constraint \"pk_orders\"",
+          "detail": "Key (customer_id)=(67890) already exists.",
+          "query": "INSERT INTO orders VALUES (12345",
+          "host": "192.168.1.10",
+          "file": "test_greenplum_log.csv"
+        },
+        {
+          "severity": "ERROR",
+          "message": "duplicate key value violates unique constraint \"pk_customers\"",
+          "detail": "Key (customer_id)=(67890) already exists.",
+          "query": "INSERT INTO orders VALUES (12345",
+          "host": "10.0.0.6",
+          "file": "test_greenplum_log.csv"
+        }
+      ]
+    },
+    "DATA_ERROR": {
+      "count": 8,
+      "hosts": [
+        "192.168.1.10",
+        "mdw",
+        "192.168.1.20",
+        "10.0.0.5",
+        "192.168.1.30",
+        "10.0.0.6"
+      ],
+      "segments": [
+        "seg0",
+        "seg5",
+        "seg-1",
+        "seg2",
+        "seg1",
+        "seg3"
+      ],
+      "examples": [
+        {
+          "severity": "WARNING",
+          "message": "invalid input syntax for type timestamp: \"not_a_date\"",
+          "detail": "Row: 1523",
+          "query": "",
+          "host": "192.168.1.20",
+          "file": "test_greenplum_log.csv"
+        },
+        {
+          "severity": "WARNING",
+          "message": "value too long for type varchar(50)",
+          "detail": "Row: 1523",
+          "query": "",
+          "host": "10.0.0.6",
+          "file": "test_greenplum_log.csv"
+        }
+      ]
+    },
+    "INTERCONNECT_ERROR": {
+      "count": 10,
+      "hosts": [
+        "10.0.0.5",
+        "192.168.1.10",
+        "192.168.1.30",
+        "10.0.0.6"
+      ],
+      "segments": [
+        "seg0",
+        "seg5",
+        "seg-1",
+        "seg2",
+        "seg3"
+      ],
+      "examples": [
+        {
+          "severity": "ERROR",
+          "message": "broken pipe on interconnect",
+          "detail": "Retry count: 3",
+          "query": "",
+          "host": "10.0.0.5",
+          "file": "test_greenplum_log.csv"
+        },
+        {
+          "severity": "ERROR",
+          "message": "connection refused",
+          "detail": "Max connections: 500",
+          "query": "",
+          "host": "192.168.1.10",
+          "file": "test_greenplum_log.csv"
+        }
+      ]
+    },
+    "DEADLOCK": {
+      "count": 5,
+      "hosts": [
+        "10.0.0.5",
+        "192.168.1.30",
+        "10.0.0.6"
+      ],
+      "segments": [
+        "seg4",
+        "seg5",
+        "seg3",
+        "seg-1"
+      ],
+      "examples": [
+        {
+          "severity": "ERROR",
+          "message": "deadlock detected",
+          "detail": "Process 11111 waits for ShareLock on transaction 12345; blocked by process 12345",
+          "query": "UPDATE orders SET status = shipped WHERE id IN (SELECT order_id FROM order_items WHERE qty > 100)",
+          "host": "192.168.1.30",
+          "file": "test_greenplum_log.csv"
+        },
+        {
+          "severity": "ERROR",
+          "message": "deadlock detected",
+          "detail": "Process 11111 waits for ShareLock on transaction 12345; blocked by process 12345",
+          "query": "DELETE FROM temp_lock_test WHERE id = 555",
+          "host": "10.0.0.6",
+          "file": "test_greenplum_log.csv"
+        }
+      ]
+    },
+    "CONNECTION_ERROR": {
+      "count": 2,
+      "hosts": [
+        "mdw",
+        "192.168.1.20"
+      ],
+      "segments": [
+        "seg0"
+      ],
+      "examples": [
+        {
+          "severity": "ERROR",
+          "message": "too many clients already",
+          "detail": "",
+          "query": "",
+          "host": "mdw",
+          "file": "test_greenplum_log.csv"
+        },
+        {
+          "severity": "ERROR",
+          "message": "connection limit exceeded for database \"warehouse\"",
+          "detail": "",
+          "query": "",
+          "host": "192.168.1.20",
+          "file": "test_greenplum_log.csv"
+        }
+      ]
+    }
+  },
+  "critical_events": [],
+  "affected_hosts": [
+    "192.168.1.10",
+    "mdw",
+    "192.168.1.20",
+    "10.0.0.5",
+    "192.168.1.30",
+    "10.0.0.6"
+  ],
+  "affected_segments": [
+    "seg0",
+    "seg4",
+    "seg5",
+    "seg-1",
+    "seg2",
+    "seg1",
+    "seg3"
+  ],
+  "databases": [
+    "prod_db",
+    "analytics",
+    "warehouse",
+    "staging",
+    "reporting",
+    "etl_db"
+  ],
+  "source_files": [
+    "test_greenplum_log.csv"
+  ]
+}

@@ -1,0 +1,48 @@
+gp_log_analyzer/
+├── main.py              # Точка входа с параметрами
+├── config.py            # Конфигурация
+├── log_reader.py        # Чтение логов из папки
+├── parser.py            # Парсинг CSV логов
+├── aggregator.py        # Агрегация результатов
+└── output.py            # Форматирование вывода
+
+# Базовое использование - анализ логов из папки
+python main.py /home/gpadmin/gpAdminLogs
+
+# Только FATAL и PANIC ошибки
+python main.py /var/log/greenplum -s FATAL
+
+# Сохранение в JSON файл
+python main.py /data/logs -o report.json -f json
+
+# Сохранение текстового отчета
+python main.py /data/logs -o report.txt -f text
+
+# Фильтрация по времени
+python main.py /data/logs --from "2024-01-15 14:00:00" --to "2024-01-15 15:00:00"
+
+# Указание своих паттернов для поиска файлов
+python main.py /data/logs --master-pattern "postgres*.csv" --segment-pattern "seg*.csv"
+
+# Просмотр всех уровней (включая DEBUG и LOG)
+python main.py /data/logs -s DEBUG
+
+Архитектура решения общения с ии и формирование промта 
+text
+[main.py] → [Агрегация ошибок] → [Prompt Builder] → [DeepSeek API] → [JSON ответ]
+
+
+#Финальный запус по поиску ошибок всех лог файлов
+python analyzer_lmstudio.py err
+
+# Последние 2 часа
+python analyzer_lmstudio.py err/ --last 2h
+
+# Последние 30 минут
+python analyzer_lmstudio.py err/ --last 30m
+
+# Последний 1 день
+python analyzer_lmstudio.py err/ --last 1d
+
+# Последние 6 часов
+python analyzer_lmstudio.py err/ --last 6h
